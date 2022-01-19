@@ -6,7 +6,7 @@ use App\Models\RelationModel;
 use App\Http\Controllers\RelationController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UpdateController;
-
+// Illuminate\Foundation\ComposerScripts::postAutoloadDump
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,8 +30,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('logs',[UpdateController::class, 'Updates'])->name('update');
 
 
-Route::view('add','addmember');
-Route::post('add',[RelationController::class, 'addData']);
+// Route::view('add','addmember');
+// Route::post('add',[RelationController::class, 'addData']);
+
+
+Route::get('/addmem',[RelationController::class, 'Form']);
+Route::post('/transfer',[RelationController::class, 'addData'])->name('student.save');
+
+
 
 Route::view('log','Login');
 Route::post('log',[LoginController::class, 'Login']);
@@ -47,3 +53,12 @@ Route::get('list/delete/{id}',[UpdateController::class, 'Delete']);
 Route::get('/pdf', [App\Http\Controllers\UpdateController::class, 'createPDF'])->name('UpdateController.createPDF');
 
 Route::get('/product/pdf', [App\Http\Controllers\UpdateController::class, 'createPDF'])->name('fmdata.pdf');
+
+// excel
+Route::get('/export', [App\Http\Controllers\UpdateController::class, 'export'])->name('UpdateController.export');
+
+// component
+Route::view('comp/','CompoUser');
+
+
+

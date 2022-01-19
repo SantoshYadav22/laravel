@@ -67,13 +67,13 @@
             
    
         <div class='Details'>
-            <a href="./add"><button class="btn btn-primary">Add Details</button></a>
-           <a href="{{ route('UpdateController.createPDF')}}"><button class="btn btn-primary">PDF Create</button></a>
+            <a href="./addmem"><button class="btn btn-primary">Add Details</button></a>
+            <a href="{{ route('UpdateController.createPDF') }}"><button class="btn btn-primary">PDF Create</button></a>
+            <a href="{{ route('UpdateController.export') }}"><button class="btn btn-primary">Excel Create</button></a>
 
-        </div>
+            </div>
 
     </div>
     </div>
 </x-app-layout>
 
-    

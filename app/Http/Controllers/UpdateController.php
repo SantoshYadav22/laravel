@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\RelationModel;
 use Illuminate\Http\Request;
 use PDF;
+use App\Disneyplus;
+use App\Exports\DisneyplusExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UpdateController extends Controller
 {
@@ -45,8 +48,11 @@ class UpdateController extends Controller
         }
 
 
+       public function export(){
+             return Excel::download(new DisneyplusExport, 'disney.csv');
+}
 
 
-
+// xsls
 
 };
