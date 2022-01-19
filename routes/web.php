@@ -61,4 +61,8 @@ Route::get('/export', [App\Http\Controllers\UpdateController::class, 'export'])-
 Route::view('comp/','CompoUser');
 
 
+// selected pdf       list/pdf/'.$list->id
+
+
+Route::get('list/pdf/{id}', [App\Http\Controllers\UpdateController::class, 'selectPDF']);
 

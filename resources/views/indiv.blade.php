@@ -23,7 +23,7 @@
         <div class = "row">
             <div class = "col-md-12">
                 <table class = "table">
-                    <caption> student list </caption>
+                    <caption> Selected list pdf </caption>
                     <thead>
                       <tr>
                         <th scope = "col" class="col1"> ID </th>
@@ -33,14 +33,14 @@
                         <th scope = "col" class="col2"> Div </th>
                       </tr>
                     </thead>
-                    <tbody>
-                        @foreach ($fmdata as $product)
+                    <tbody >
+                        @foreach ($fmdatas as $products)
                         <tr>
-                            <th  class="col1" scope = "row"> {{$product-> id}} </th>
-                            <td class="col1" > {{$product-> name}} </td>
-                            <td class="col1" > {{$product-> rollno}} </td>
-                            <td class="col1" > {{$product-> std}} </td>
-                            <td class="col2"> {{$product-> div}} </td>
+                            <th  class="col" scope = "row"> {{$products-> id}} </th>
+                            <td class="col" > {{$products-> name}} </td>
+                            <td class="col" > {{$products-> rollno}} </td>
+                            <td class="col" > {{$products-> std}} </td>
+                            <td class="col"> {{$products-> div}} </td>
                         </tr>
                         @endforeach
                     </tbody>

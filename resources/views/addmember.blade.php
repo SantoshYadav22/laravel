@@ -25,7 +25,7 @@
   <div class="row mb-3">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Roll NO.</label>
     <div class="col-sm-10">
-      <input type="number" max="20" min="1" class="form-control" name='rollno' id="inputPassword3">
+      <input type="number"  class="form-control" name='rollno' id="inputPassword3">
       <span class="text-danger error-text rollno_error"></span>
     </div>
   </div>
@@ -33,7 +33,7 @@
   <div class="row mb-3">
     <label for="inputPassword3" class="col-sm-2 col-form-label">Standard</label>
     <div class="col-sm-10">
-      <input type="number" max="20" min="1" class="form-control" name='std' id="inputPassword3">
+      <input type="number"  class="form-control" name='std' id="inputPassword3">
       <span class="text-danger error-text std_error"></span>
     </div>
   </div>

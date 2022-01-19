@@ -17,8 +17,8 @@ class RelationController extends Controller
             function addData(Request $request){
                 $validator=Validator::make($request->all(),[
                     'name'=>'required|regex:/^[\pL\s\-]+$/u',
-                    'rollno'=>'required|numeric',
-                    'std'=>'required|numeric',
+                    'rollno'=>'required|numeric|max:100',
+                    'std'=>'required|numeric|max:20',
                     'div'=>'required|regex:/^[\pL\s\-]+$/u|max:1' 
 
 
@@ -48,6 +48,12 @@ class RelationController extends Controller
                 
                 }
             }
+
+
+
+
+
+            
     
   
 }

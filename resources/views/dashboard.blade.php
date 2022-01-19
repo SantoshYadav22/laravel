@@ -32,6 +32,7 @@
                <table class="table">
   <thead>
     <tr>
+        <th  scope="col">Select</th>
         <th scope="col">Sr No.</th>
       <th scope="col">NAME</th>
       <th scope="col">ROLL NO.</th>
@@ -45,7 +46,8 @@
                     <tbody>
                         @foreach ($fmdata as $list)           
                         <tr>
-                    
+                            
+                        <th scope="row" ><a href="{{url('list/pdf/'.$list->id)}}"><button><input type="checkbox" multiple name="select[]"> PDF</button></a></th>                            
                         <th scope="row" >{{ $list->id }}</th >
                         <th scope="row" >{{ $list->name }}</th >
                         <td>{{ $list->rollno }}</td>

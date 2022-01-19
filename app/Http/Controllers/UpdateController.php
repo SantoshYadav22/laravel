@@ -39,7 +39,7 @@ class UpdateController extends Controller
         return Redirect()->back()->with('success','lists delete');
 
         }
-
+// pdf
         public function createPDF () {
                 $fmdata=RelationModel::all();
                 view()->share ('fmdata', $fmdata);
@@ -47,12 +47,23 @@ class UpdateController extends Controller
                 return $pdf->download ('file-pdf.pdf');
         }
 
-
+// xsls
        public function export(){
              return Excel::download(new DisneyplusExport, 'disney.csv');
 }
 
 
-// xsls
+
+// selectPDF
+public function selectPDF($id){
+        $fmdatas=RelationModel::where('id',$id)->get();
+        view()->share('fmdatas', $fmdatas);
+        $pdf = PDF ::loadView ('indiv', $fmdatas);
+        return $pdf->download ('file-pdf.pdf');
+}
+
+
+
+
 
 };
